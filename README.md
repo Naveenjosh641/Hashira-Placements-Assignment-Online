@@ -1,34 +1,35 @@
----
+# 🔐 Hashira Placements Assignment — Secret Sharing via Polynomial Interpolation
 
-## ✅ HOW TO USE THIS README
+> ✅ **Secret Reconstructed**: `YOUR_SECRET_HERE` *(Replace after running code)*
 
-1. Copy the entire markdown above.
-2. In your project folder, create/edit `README.md`.
-3. Paste this content.
-4. 🔥 **CRITICAL**: After running your code, **replace**:
-   - `YOUR_SECRET_NUMBER_HERE` → with your actual secret (e.g., `100192837465019283746`)
-   - `[Your Full Name]`, `[your.email@example.com]`, etc. → with your info
-   - `[https://github.com/yourusername/your-repo-name]` → with your actual repo link
+A Java solution to reconstruct a secret integer using **Lagrange interpolation** over points given in mixed bases — based on **Shamir’s Secret Sharing Scheme**.
+
+Submitted by: **Naveen Josh**
 
 ---
 
-## 🎁 BONUS: Want to Auto-Update Secret in README?
+## 🎯 Problem
 
-You can modify the Java code to also **write the secret to README.md** automatically — let me know if you want that feature!
-
----
-
-## 🚀 You’re Done!
-
-This README:
-✅ Looks professional  
-✅ Explains everything clearly  
-✅ Helps evaluators run your code  
-✅ Shows attention to detail  
-✅ Makes you stand out
+Given `n` points `(x, f(x))`, where each `f(x)` is provided as a string in a specified base (e.g., base 3, 16, etc.), reconstruct the secret `f(0)` using any `k` points.
 
 ---
 
-📌 **Final Tip**: Commit this README to GitHub — it’ll render beautifully and impress anyone who views your repo.
+## 🧠 Solution
 
-Let me know when you’ve updated it with your secret — I’ll help you polish it further if needed! 🎓🚀
+- Parse `input.json`
+- Convert each value from its base to `BigInteger`
+- Use Lagrange interpolation on first `k` sorted points
+- Output `f(0)` — the secret
+
+✅ Uses exact integer arithmetic — no floating point  
+✅ Handles arbitrarily large numbers  
+✅ Supports bases 2–36
+
+---
+
+## 🚀 How to Run
+
+### With Maven:
+```bash
+mvn compile
+mvn exec:java
