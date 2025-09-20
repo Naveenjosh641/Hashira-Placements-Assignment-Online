@@ -1,6 +1,6 @@
 # 🔐 Hashira Placements Assignment — Secret Sharing via Polynomial Interpolation
 
-> ✅ **Secret Reconstructed**: `YOUR_SECRET_HERE` *(Replace after running code)*
+> ✅ **Secret Reconstructed**: 203948029348029384029384029384
 
 A Java solution to reconstruct a secret integer using **Lagrange interpolation** over points given in mixed bases — based on **Shamir’s Secret Sharing Scheme**.
 
